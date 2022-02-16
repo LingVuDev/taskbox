@@ -1,5 +1,5 @@
 # Workflow name
-name: "Chromatic Deployment"
+name: "Github Pages Deployment"
 
 # Event for the workflow
 on: push
