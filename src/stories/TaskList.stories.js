@@ -1,7 +1,20 @@
 import React from "react";
 
-import TaskList from "./TaskList";
+import {
+  Title,
+  Subtitle,
+  Description,
+  Primary,
+  ArgsTable,
+  Stories,
+  PRIMARY_STORY,
+} from "@storybook/addon-docs";
+
+import TaskList from "../components/TaskList";
+import Task from "../components/Task";
 import * as TaskStories from "./Task.stories";
+
+import TaskListDocs from "./TaskList.docs.mdx";
 
 import { Provider } from "react-redux";
 
@@ -48,8 +61,14 @@ const Mockstore = ({ taskboxState, children }) => (
 
 export default {
   component: TaskList,
-  title: "TaskList",
+  title: "Components/TaskList",
   decorators: [(story) => <div style={{ padding: "3rem" }}>{story()}</div>],
+  subcomponents: { Task },
+  parameters: {
+    docs: {
+      page: TaskListDocs,
+    },
+  },
   excludeStories: /.*MockedState$/,
 };
 

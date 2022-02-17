@@ -3,6 +3,9 @@ import Task from "./Task";
 import { useDispatch, useSelector } from "react-redux";
 import { updateTaskState } from "../lib/store";
 
+/**
+ * TaskLists are a continuous group of tasks. They are composed of items containing primary and supplemental actions, which are represented by text.
+ */
 export default function TaskList() {
   // We're retrieving our state from the store
   const tasks = useSelector((state) => {

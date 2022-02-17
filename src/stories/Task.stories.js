@@ -1,10 +1,10 @@
 import React from "react";
 
-import Task from "./Task";
+import Task from "../components/Task";
 
 export default {
   component: Task,
-  title: "Task",
+  title: "Components/Task",
 };
 
 const Template = (args) => <Task {...args} />;

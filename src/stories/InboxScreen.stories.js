@@ -1,6 +1,6 @@
 import React from "react";
 
-import InboxScreen from "./InboxScreen";
+import InboxScreen from "../components/InboxScreen";
 import store from "../lib/store";
 import { rest } from "msw";
 import { MockedState } from "./TaskList.stories";
@@ -16,7 +16,7 @@ import {
 
 export default {
   component: InboxScreen,
-  title: "InboxScreen",
+  title: "Screens/InboxScreen",
   decorators: [
     (Story) => (
       <Provider store={store}>
